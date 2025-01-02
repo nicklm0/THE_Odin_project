@@ -27,3 +27,45 @@
 /*6 Take a few minutes to keep playing around with various things in your script tag. Eventually, 
     we will learn how to actually make those numbers and things show up on the webpage, but all of this logic
     will remain the same, so make sure you’re comfortable with it before moving on.*/
+
+
+    // I get it, you're curious, 
+// but it's OK if you don't understand what's going on in here, you'll learn it in time.
+
+const abTroubleshoot = require("./troubleshooting");
+
+const result = abTroubleshoot();
+
+if(result === 2) {
+	console.log("Congrats! You got the correct answer");
+} else if(typeof result === 'number') {
+	console.log(`You returned the number ${result}, the result should be the number 2`);
+} else {
+	console.log(`You returned string "${result}", the result should be the number 2`);
+}
+
+/**
+ * ===== Troubleshooting =====
+ * The function below should log the number 2, however it does not, 
+ * see if you can fix it!
+ * Be sure to fix it in the spirit of the code, do not hard code the result.
+ */
+
+function troubleshooting() {
+	const a = 1;
+	const b = 1;
+
+	let result;
+
+	// Edit between these lines
+	// =================================
+	result = "a" + "b";
+
+	// =================================
+
+	return result;
+}
+
+// Do not change this 
+module.exports = troubleshooting;
+

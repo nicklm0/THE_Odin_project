@@ -1,0 +1,108 @@
+/* Import Retro Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+  flex-direction: column;
+  font-family: "Press Start 2P", cursive; /* Retro font */
+  background-color: #1f1f2e;
+  color: #e0e0e0;
+}
+
+.grid-container {
+  border: 2px solid #3dc4d6; /* Neon green border for retro vibe */
+  background-color: #2a2a3e; /* Dark background for grid */
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.1); /* Neon green shadow for depth */
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.square {
+  flex: 1;
+  box-sizing: border-box;
+  border: 0.5px solid #444;
+  transition: background-color 0.2s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+.square:hover {
+  background-color: #333;
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+button {
+  display: flex;
+  padding: 14px 24px;
+  margin: 10px;
+  color: #dcdcdc;
+  background-color: #444;
+  border: 1px solid #666;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase; /* Uppercase text for buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); /* Subtle shadow effect */
+}
+
+button:hover {
+  background-color: #666;
+  color: #f5f5f5;
+  transform: translateY(-4px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3); /* Enhanced glow effect on hover */
+}
+
+input[type="range"] {
+  width: 300px;
+  margin-top: 10px;
+  cursor: pointer;
+  background: #333; /* Darker slider background */
+  border-radius: 5px;
+  outline: none;
+}
+
+#size-label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: #e0e0e0; /* Lighter text for labels */
+}
+
+.slider-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+button:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+button:active {
+  transform: translateY(3px); /* Button presses down more when clicked */
+}

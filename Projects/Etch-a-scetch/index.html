@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Etch a sketch</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="button-container">
+        <button id="btn-black" class="black">Black</button>
+        <button id="btn-rainbow" class="rainbow">Rainbow</button>
+        <button id="btn-eraser" class="eraser">Eraser</button>
+        <button id="btn-clear" class="clear">Clear</button>
+    </div>
+
+    <div id="grid-container" class="grid-container"></div>
+    <div class="slider-container">
+        <label for="grid-size" >Grid Size:</label>
+        <input type="range" id="grid-size" min="1" max="100" value="50" />
+        <span id="size-label">50</span>
+  </div>
+   <label for="toggle-grid-lines">Show Grid Lines</label>
+   <input type="checkbox" id="toggle-grid-lines" checked/>
+</body>
+</html>

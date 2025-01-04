@@ -3,10 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock paper and scissors</title>
 </head>
 <body>
+<h1 class="header"> Rock, Paper, Scissors</h1>
+    <div class="choices">
+        <button onclick="playgame('rock')">Rock</button>
+        <button onclick="playgame(paper)">Paper</button>
+        <button onclick="playgame(scissors)">Scissors</button>
+    </div>
+    <div class="results">
+        <p>Player: <span id="player">0</span></p>
+        <p>Computer: <span id="computer">0</span></p>
+        <p>Winner: <span id="winner">0</span></p>
+    </div>
+    <style>
+        .header{
+            color: brown;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 30px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .choices{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .results{
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
     <script>
-        
-    </script>>
+        const buttons = document.querySelectorAll('button');
+        const playerScore = document.querySelector('#player');
+        const computerScore = document.querySelector('#computer');
+        const winner = document.querySelector('#winner');
+        let player = 0;
+        let computer = 0;
+        let winnerScore = 0;
+        function playgame(playerChoice){
+            const choices = ['rock', 'paper', 'scissors'];
+            const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+            if(playerChoice === computerChoice){
+                winnerScore = 'Tie';
+            }else if(playerChoice === 'rock' && computerChoice === 'scissors'){
+                player++;
+                winnerScore = 'Player';
+            }else if(playerChoice === 'paper' && computerChoice === 'rock'){
+                player++;
+                winnerScore = 'Player';
+            }else if(playerChoice === 'scissors' && computerChoice === 'paper'){
+                player++;
+                winnerScore = 'Player';
+            }else{
+                computer++;
+                winnerScore = 'Computer';
+            }
+            playerScore.textContent = player;
+            computerScore.textContent = computer;
+            winner.textContent = winnerScore;
+        }
+    </script>
+</body>
 </html>

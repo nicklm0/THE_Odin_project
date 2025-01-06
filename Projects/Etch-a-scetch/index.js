@@ -1,10 +1,9 @@
 // Select DOM elements
-const body = document.body;
 const container = document.querySelector(".grid-container");
 const gridSizeSlider = document.getElementById("grid-size");
 const sizeLabel = document.getElementById("size-label");
 const buttons = document.querySelectorAll("button");
-const gridLineToggle = document.getElementById("toggle-grid-lines"); // The new checkbox to toggle grid lines
+const gridLineToggle = document.getElementById("toggle-grid-lines");
 
 // Function to create the grid
 function createGrid(size) {
@@ -16,7 +15,6 @@ function createGrid(size) {
 
     for (let j = 0; j < size; j++) {
       const square = document.createElement("div");
-      square.style.backgroundColor = "white";
       square.classList.add("square");
       row.appendChild(square);
     }
@@ -49,7 +47,6 @@ function setColorMode(mode) {
 // Function to get a random color
 function getRandomColor() {
   let r, g, b;
-  // Ensure that we don't get white (rgb(255, 255, 255))
   do {
     r = Math.floor(Math.random() * 256);
     g = Math.floor(Math.random() * 256);
@@ -70,8 +67,8 @@ function clearCanvas() {
 // Function to update the grid size
 function updateGridSize() {
   const gridSize = gridSizeSlider.value;
-  sizeLabel.textContent = gridSize; // Update the label with the current grid size
-  createGrid(gridSize); // Create a new grid with the updated size
+  sizeLabel.textContent = gridSize;
+  createGrid(gridSize);
 }
 
 // Function to toggle grid lines
@@ -79,7 +76,7 @@ function toggleGridLines(shouldShow) {
   const squares = container.querySelectorAll(".square");
   squares.forEach((square) => {
     if (shouldShow) {
-      square.style.border = "0.5px solid #444"; // Show grid lines (light border)
+      square.style.border = "0.5px solid #444"; // Show grid lines
     } else {
       square.style.border = "none"; // Hide grid lines
     }
@@ -87,22 +84,12 @@ function toggleGridLines(shouldShow) {
 }
 
 // Event listeners for buttons and slider
-document
-  .getElementById("btn-black")
-  .addEventListener("click", () => setColorMode("black"));
+document.getElementById("btn-black").addEventListener("click", () => setColorMode("black"));
+document.getElementById("btn-rainbow").addEventListener("click", () => setColorMode("rainbow"));
+document.getElementById("btn-eraser").addEventListener("click", () => setColorMode("eraser"));
+document.getElementById("btn-clear").addEventListener("click", clearCanvas);
 
-document
-  .getElementById("btn-rainbow")
-  .addEventListener("click", () => setColorMode("rainbow"));
-
-document
-  .getElementById("btn-eraser")
-  .addEventListener("click", () => setColorMode("eraser"));
-
-document.getElementById("clear-canvas").addEventListener("click", clearCanvas);
-
-gridSizeSlider.addEventListener("input", updateGridSize); // Update grid size when slider value changes
-
+gridSizeSlider.addEventListener("input", updateGridSize);
 gridLineToggle.addEventListener("change", () => {
   toggleGridLines(gridLineToggle.checked); // Toggle grid lines based on checkbox status
 });

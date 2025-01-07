@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/script.js" defer></script> <!--add js script later--> 
+    <title>Sign Up Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <div class="logo-container">
+                <img class="logo-img" src="../assets/odin-lined.png" alt="Odin logo"/>
+                <span class="logo-name">Odin</span>
+            </div>
+            <p class="image-attr">Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a></p>
+        </div>
+        <form class="form" action="https://httpbin.org/post" method="post">
+            <div class="form-section">
+                <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
+                <p>You <em>know</em> you want to.</p>
+            </div>
+            <div class="form-section form-section--main">
+                <p>Lets do this</p>
+                <div class="form-row">
+                    <span class="form-group"><!--add first name, last name, phone number and email-->
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                    </span>
+                    <span class="form-group">
+                        <label for="last-name">Last name</label>
+                          <input type="text" id="last-name" name="last-name" placeholder="Last Name" required/>
+                        </span>
+                </div>
+                <div class="form-row">
+                    <span class="form-group">
+                        <label for="email-address">Email address</label>
+                        <input type="email" id="email-address" name="email-address" placeholder="you@email.com" required>
+                    </span>
+                    <span class="form-group">
+                        <label for="phone">Phone number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(XXX)XXX-XXXX"/>
+                </span>
+            </div>
+            <div class="form-row form-row--single"><!--for the password-->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder=" " required/>
+                    <button type="button" class="toggle-pwd-btn" id="togglePwdBtn" onclick="togglePwd(this)">
+                        <span class="pwd-visibility show-pwd" id="showPwd"><img src="/Sign-up-form/assets/icons/visibility.svg"> Show</span>
+                        <span class="pwd-visibility hide-pwd" id="hidePwd"><img src="/Sign-up-form/assets/icons/visibility-off.svg"> Hide</span>
+                      </button>
+            </div>
+            <ul class="message" id="pwd-requirements">
+                <li id="length">At least 8 characters</li>
+                <li id="lowercase">At least one lowercase letter</li>
+                <li id="uppercase">At least one uppercase letter</li>
+                <li id="number">At least one number</li>
+            </ul>
+            <div class="form-row form-row--single">
+                <span class="form-group">
+                  <label for="confirm-password">Confirm password</label>
+                  <input type="password" class="pwd-input" id="confirm-password" name="confirm-password" placeholder=" " required/>
+                  <button type="button" class="toggle-pwd-btn" id="toggleConfirmPwdBtn" onclick="togglePwd(this)">
+                    <span class="pwd-visibility show-pwd" id="showConfirmPwd"><img src="/Sign-up-form/assets/icons/visibility.svg"> Show</span>
+                    <span class="pwd-visibility hide-pwd" id="hideConfirmPwd"><img src="/Sign-up-form/assets/icons/visibility-off.svg"> Hide</span>
+                  </button>
+                </span>
+    </div>
+    <div class="form-section">
+        <button id="submit-btn" type="submit">Create Account</button>
+        <p class="login-prompt">Already have an account? <a class="login-link" href="#">Log in</a></p>
+    </div>
+</div>
+</form>
+</div>
+</body>
+</html>

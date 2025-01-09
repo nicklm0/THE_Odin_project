@@ -1,0 +1,8 @@
+{
+    "launch": {
+        "workbench.editor.showTabs": true,
+        "workbench.editor.enablePreview": true,
+        "configurations": [],
+        "compounds": []
+    }
+}

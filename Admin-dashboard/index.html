@@ -4,9 +4,200 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../Admin-dashboard/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Admin Dashboard</title>
 </head>
 <body>
-    
+    <div class="outline fillnavy" id="header">
+        <div class="logo"> <img src="/Admin-dashboard/assets/icons/table_view.svg" alt="" class="main-icon"> dashboard</div>
+        <div id="admin">
+            <div class="fillback outline" id="search">
+                <img src="/Admin-dashboard/assets/icons/search.svg" alt="" class="icon">
+                <input type="text" placeholder="Search" class="input-box fillback" id="search-box"/>
+            </div>
+            <button class="black">+New</button>
+            <button class="black">Upload</button>
+            <button class="black">Share</button> 
+            <img src="/Admin-dashboard/assets/icons/notifications.svg" alt="#" class="icon">
+            <div class="avatar-md prof11"></div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="container">
+        <div class="fillnavy outline" id="sidebar">
+            <div class="side-nav-main">
+                <ul>
+                    <li class="li-nav"><a href=""><img src="/Admin-dashboard/assets/icons/home.svg" alt="" class="icon icon-nav">Home</a></li>
+                    <li class="li-nav"><a href=""><img src="/Admin-dashboard/assets/icons/person.svg" alt="" class="icon icon-nav">Profile</a></li>
+                    <li class="li-nav"><a href=""><img src="/Admin-dashboard/assets/icons/forum.svg" alt="" class="icon icon-nav">Messages</a></li>   
+                    <li class="li-nav"><a href=""><img src="/Admin-dashboard/assets/icons/history.svg" alt="" class="icon icon-nav">History</a></li>
+                    <li class="li-nav"><a href=""><img src="/Admin-dashboard/assets/icons/task.svg" alt="" class="icon icon-nav">Tasks</a></li>
+                    <li class="li-nav"><a href=""><img src="/Admin-dashboard/assets/icons/community.svg" alt="" class="icon icon-nav">Communities</a></li>
+                </ul>
+                <ul id="side-nav-sub">
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Profile page -->
+        <div id="page">
+            <div id="content">
+                <div id="welcome">
+                    <div class="avatar-lg prof11"></div>
+                    <div class="welcome">
+                        <p>Hi there, </p>
+                        <h2>Morgan Oakley (@morgan)</h2>
+                    </div>
+                </div>
+                <!-- Post/ the contents -->
+                <div class="stats">
+                    <ul class="stats-display">
+                        <li class="li-stats"><img src="/Admin-dashboard/assets/icons/chat.svg" alt="" class="icon icon-stat">9</li>
+                        <li class="li-stats"><img src="/Admin-dashboard/assets/icons/prompt.svg" alt="" class="icon icon-stat">14</li>
+                        <li class="li-stats"><img src="/Admin-dashboard/assets/icons/star.svg" alt="" class="icon icon-stat">205</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="info feat1 wiggle">
+                        <h3 class="project-title">Less Cool Project</h3>
+                        <p class="project-description">Admiration stimulated cultivated reasonable be projection possession of. Real no near room ye bred sake if some. Is arranging furnished knowledge agreeable so. Fanny as smile up small. It vulgar chatty simple months turned oh at change of. Astonished set expression solicitude way admiration.</p>
+                    </div>
+                    <div class="stats">
+                        <ul class="stats-display">
+                            <li class="li-stats"><img src="images/chat.svg" alt="" class="icon icon-stat">9</li>
+                            <li class="li-stats"><img src="images/prompt.svg" alt="" class="icon icon-stat">14</li>
+                            <li class="li-stats"><img src="images/star.svg" alt="" class="icon icon-stat">205</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="updates">
+                <div class="outline padded fillnavy">
+                    <div class="section-title">Announcements</div>
+                    <div class="update-block">
+                        <div class="update-title">Site Maintenance</div>
+                        <div class="update-text">Or neglected agreeable of discovery concluded oh it sportsman. Week to time in john. Son elegance use weddings separate. </div>
+                    </div>
+                    <div class="update-block">
+                        <div class="update-title">Community Share Day</div>
+                        <div class="update-text">An an valley indeed so no wonder future nature vanity. Debating all she mistaken indulged believed provided declared.</div>
+                    </div>
+                    <div class="update-block">
+                        <div class="update-title">Updated Privacy Policy</div>
+                        <div class="update-text">In to am attended desirous raptures declared diverted confined at. Collected instantly remaining up certainly to necessary as. Over walk dull into son boy door went new.</div>
+                    </div>
+                </div>
+                <div class="outline padded fillnavy">
+                    <div class="section-title">Trending</div>
+                    <div class="trend-block">
+                        <div class="avatar-lg prof13"></div>
+                        <div class="trend-info">
+                            <div class="trend-user">@tegan</div>
+                            <div class="trend-title">World Peace Builder</div>
+                        </div>
+                    </div>
+                    <div class="trend-block">
+                        <div class="avatar-lg prof11"></div>
+                        <div class="trend-info">
+                            <div class="trend-user">@morgan</div>
+                            <div class="trend-title">Super Cool Project</div>
+                        </div>
+                    </div>
+                    <div class="trend-block">
+                        <div class="avatar-lg prof1"></div>
+                        <div class="trend-info">
+                            <div class="trend-user">@kendall</div>
+                            <div class="trend-title">Life Changing App</div>
+                        </div>
+                    </div>
+                    <div class="trend-block">
+                        <div class="avatar-lg prof12"></div>
+                        <div class="trend-info">
+                            <div class="trend-user">@alex</div>
+                            <div class="trend-title">No Traffic Maker</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="current">
+            <div class="section-title">Other Projects</div>
+            <div class="cards">
+                <div class="card">
+                    <div class="info fillnavy wiggle">
+                        <h3 class="project-title">Impossible App</h3>
+                        <p class="project-description">Set put shyness offices his females him distant. Improve has message besides shy himself cheered however how son. Quick judge other leave ask first chief her. Indeed or remark always</p>
+                    </div>
+                    <div class="stats">
+                        <ul class="stats-display">
+                            <li class="li-stats"><img src="images/chat.svg" alt="" class="icon icon-stat">9</li>
+                            <li class="li-stats"><img src="images/prompt.svg" alt="" class="icon icon-stat">14</li>
+                            <li class="li-stats"><img src="images/star.svg" alt="" class="icon icon-stat">205</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="info fillnavy wiggle">
+                        <h3 class="project-title">Easy Peasy App</h3>
+                        <p class="project-description">Collected instantly remaining up certainly to necessary as. Over walk dull into son boy door went new. At or happiness commanded</p>
+                    </div>
+                    <div class="stats">
+                        <ul class="stats-display">
+                            <li class="li-stats"><img src="images/chat.svg" alt="" class="icon icon-stat">9</li>
+                            <li class="li-stats"><img src="images/prompt.svg" alt="" class="icon icon-stat">14</li>
+                            <li class="li-stats"><img src="images/star.svg" alt="" class="icon icon-stat">205</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="info fillnavy wiggle">
+                        <h3 class="project-title">Ad Blocker</h3>
+                        <p class="project-description">Piqued son turned fat income played end wicket. To do noisy downs round an happy books. Sing long her way size. Waited</p>
+                    </div>
+                    <div class="stats">
+                        <ul class="stats-display">
+                            <li class="li-stats"><img src="images/chat.svg" alt="" class="icon icon-stat">9</li>
+                            <li class="li-stats"><img src="images/prompt.svg" alt="" class="icon icon-stat">14</li>
+                            <li class="li-stats"><img src="images/star.svg" alt="" class="icon icon-stat">205</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="info fillnavy wiggle">
+                        <h3 class="project-title">Money Maker</h3>
+                        <p class="project-description">End mutual missed myself the little sister one. So in pointed or chicken cheered neither spirits invited. Marianne and him</p>
+                    </div>
+                    <div class="stats">
+                        <ul class="stats-display">
+                            <li class="li-stats"><img src="images/chat.svg" alt="" class="icon icon-stat">9</li>
+                            <li class="li-stats"><img src="images/prompt.svg" alt="" class="icon icon-stat">14</li>
+                            <li class="li-stats"><img src="images/star.svg" alt="" class="icon icon-stat">205</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="info fillnavy wiggle">
+                        <h3 class="project-title">One Last Project</h3>
+                        <p class="project-description">Laughter civility formerly handsome sex use prospect. Hence we doors is given rapid scale above am. Difficult ye mr delivered behaviour by an. If their woman could do wound on. You folly taste hoped their above are and but.</p>
+                    </div>
+                    <div class="stats">
+                        <ul class="stats-display">
+                            <li class="li-stats"><img src="images/chat.svg" alt="" class="icon icon-stat">9</li>
+                            <li class="li-stats"><img src="images/prompt.svg" alt="" class="icon icon-stat">14</li>
+                            <li class="li-stats"><img src="images/star.svg" alt="" class="icon icon-stat">205</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

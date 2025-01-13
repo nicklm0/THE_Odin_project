@@ -1,156 +1,166 @@
 * {
-    font-size: 1em;
-    font-family: sans-serif;
-    box-sizing: border-box;
+	font-size: 1em;
+	font-family: serif;
+	box-sizing: border-box;
 }
 
 body {
-    color: white;
-    background-color: #fff;
+	color: white;
+	background: #fff;
 }
-    /* add grid to the main-container*/
+
 .main-container {
-    display: grid;
-    grid-template: min-content 1fr / 1fr 80vw 1fr;
-    background-color: white;
-    color: black;
-    min-height: 100%;
-    min-width: 500px;
-    margin: 0px auto;
+	display: grid;
+	grid-template: min-content 1fr / 1fr 80vw 1fr;
+	background-color: white;
+	color: black;
+	min-height: 100%;
+	min-width: 500px;
+	margin: 0px auto;
 }
 
 .top-bar {
-    position: sticky;
-    top: 0px;
-    background-color: white;
-    grid-area: 1 / 1 / 3 / 4;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    width: auto;
-    border-bottom: 2px solid black;
-    margin: 0 3em;
-    padding-top: 2em;
+	position: sticky;
+	top: 0px;
+	background-color: white;
+	grid-area: 1 / 1 / 3 / 4;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	width: auto;
+	border-bottom: 2px solid black;
+	margin: 0 3em;
+	padding-top: 2em;
 }
-
 
 .top-bar * {
-    display: flex;
-    align-items: end;
-    justify-content: center;
+	display: flex;
+	align-items: end;
+	justify-content: center;
 }
 
-.top-bar button { 
-    appearance: none;
-    color: black;
-    background-color: white;
-    font-size: 2em;
-    margin-bottom: 3%;
-    padding: 0;
-    border: 0;    
+.top-bar button {
+	appearance: none;
+	color: black;
+	background-color: white;
+	font-size: 2em;
+	margin-bottom: 3%;
+	padding: 0;
+	border: 0;
 }
 
 .top-left {
-    font-size: 2em;
-    padding-bottom: 5px;
+	font-size: 3em;
+	padding-bottom: 5px;
 }
 
 .top-right {
-    gap: 2em;
-    width: 35%;
+	gap: 2em;
+	width: 35%;
 }
-
 
 .book-area {
-    grid-area:  3 / 2 / 4 / 3;
-    justify-self: center;
-    display: grid;
-    grid-auto-rows: repeat(auto-fit, minmax(300px, 1fr));
-    width: 80%;
-    margin: 0 auto;
-    padding: 5% 0;
-    font-size: 2em;
+	grid-area: 3 / 2 / 4 / 3;
+	justify-self: center;
+	display: grid;
+	grid-auto-rows: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2em;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	width: 80%;
+	margin: 0 auto;
+	padding: 5% 0;
+
+	font-size: 1.2em;
 }
 
-.book-entry {
-    display: grid;
-    grid-template-rows: 1.5fr 2fr 1em;
-    grid-template-columns: 0.7fr 1fr;
-    width: 18wv;
-    min-width: 300px;
-    min-height: 200px;
-    min-height: 300px;
-    border: 1px solid black;
-    padding: 0.7em; 
+.book-entry { 
+	display: grid;
+	grid-template-rows: 1.5fr 2fr 1em;
+	grid-template-columns: 0.7fr 1fr;
+	width: 18vw;
+	min-width: 300px;
+	min-height: 200px;
+	max-height: 300px;
+	border: 1px solid black;
+	padding: 0.7em;
 }
 
 .book-entry-icon {
-    max-width: 80%;
+	width: 100%;
+	max-height: 100%;
+	display: flex;
+	justify-content: center;
+	grid-area: 1 / 1 / 2 / 2;
+	padding: 0.5em;
+}
 
+.book-entry-icon img {
+	max-width: 80%;
+}
+
+.book-entry-info {
+	grid-area: 1 / 2 / 2 / 3;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding-bottom: 0.5em;
 }
 
 .book-entry-info-title {
-    font-size: 1.2em;
-    font-style: italic;
-    font-weight: bold;
+	font-size: 1.2em;
+	font-style: italic;
+	font-weight: bold;
 }
-
 
 .book-entry-info-pages {
-    font-size: 0.8em;
+	font-size: 0.8em;
 }
 
-.book-entry-discription {
-    grid-area: 2 / 1 / 3 / 3;
-    display: block;
-    text-align: justify;
-    word-break: break-word;
+.book-entry-description {
+	grid-area: 2 / 1 / 3 / 3;
+	display: block;
+	text-align: justify;
+	word-break: break-word;
 }
-
 
 .book-entry-readstatus {
-    grid-area: 2 / 1 / 3 / 3;
-    justify-self: end;
-    font-size: 0.8em;
-    margin-top: 0.3em;
+	grid-area: 3 / 2 / 4 / 3;
+	justify-self: end;
+	font-size: 0.8em;
+	margin-top: 0.3em;
 }
 
-
 .book-entry-delete {
-    font-size: 0.8em;
-    display: none;
-    grid-area: 2 / 1 / 3 / 3;
-
+	font-size: 0.8em;
+	display: none;
+	grid-area: 3 / 1 / 4 / 2;
 }
 
 .book-entry-delete:hover {
-    cursor: pointer;
-    font-weight: bold;
-
+	cursor: pointer;
+	font-weight: bold;
 }
 
-
 dialog {
-    width: 25vw;
-    min-width: min-content;
-    border: 2px solid black;
-    padding: 0;
+	width: 25vw;
+	min-width: min-content;
+	border: 2px solid black;
+	padding: 0;
 }
 
 dialog::backdrop {
-    backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 1em;
-
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 1em;
 }
 
 form button {
-    appearance: none;
+	appearance: none;
 	-webkit-appearance: none;
 	background-color: white;
 	text-align: center;
@@ -163,7 +173,6 @@ form button {
 	margin-top: 1em;
 	border: 2px solid black;
 }
-
 
 .form-group {
 	width: 100%;
@@ -235,6 +244,5 @@ legend {
 	font-size: 2em;
 	margin-bottom: 1em;
 }
-
 
 

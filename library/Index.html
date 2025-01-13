@@ -3,9 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Library</title>
 </head>
 <body>
-    
+                <!--creating up the forms-->
+        <dialog id="add-book-dialog">
+           <form action="index.html" id="add-book-form">
+                <fieldset>
+                    <legend>Add Book </legend>
+                     <div class="form-group">
+                        <label for="Book-Title">Book Title</label>
+                        <input type="text" name="Book-Title"  id="add-book-dialog-title" maxlength="50"/>
+                    </div>
+                    <div class="form-group">
+                        <label id="Book-Author" id="book-author">Author Name</label>
+                        <input type="text" name="bookAuthor" id="add-book-dialog-author" maxlength="50"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="BookPages" id="book-pages">Number of pages</label>
+                            <input type="text" name="BookPages" id="add-book-dialog-book-pages" pattern="^[0-9]+$" maxlength="5"/><span></span>   
+                    </div>
+
+                    <div class="form-group"> 
+                       <label for="BookDiscription" id="book-description">Description</label>
+                        <textarea name="Book-Discription" id="add-book-dialog-discription" maxlength="160"></textarea>
+                    </div>
+                        <div class="form-group">
+                            <label for="BookReadStatus">
+                                    <input type="checkbox" name="BookReadStatus" id="add-book-dialog-readstatus"/>I've finished reading this book</label>
+
+                        </div>
+                </fieldset>
+
+                <!--crateing a button for add books-->
+                    <button id="add-book-dialog-button" onclick="inputAddBook()">+</button>
+           </form> 
+    </dialog>
+
+       <main class="main-container" id="main-container">
+            <div class="top-left">
+                <div class="title">
+                    <span>reading stack</span>
+                </div>
+            </div>
+
+            <div class="top-right">
+                <button id="add-book" onclick="showDialog()"></button>
+
+                </div>
+            </div>
+       </main>
+       <script src="/main.js"></script>
 </body>
 </html>

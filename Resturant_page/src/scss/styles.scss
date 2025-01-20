@@ -1,0 +1,153 @@
+@use "./reset";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+/* true colors*/
+
+$color-1: #FFFFFF;
+$color-2: #111111;
+$color-3: #EEEEEE;
+$color-4: #767676;
+$color-5:  #D1D1D1;
+
+
+html {
+    font-size: 10px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    color: $color-2;
+    flex-flow: 1;
+    letter-spacing: 0.1em;
+}
+
+a, button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 2em;
+    max-width: 1320px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    align-self: stretch;
+    border-bottom: 1px solid $color-5;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+.navigation {
+    display: flex;
+    gap: 1em;
+}
+
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+& .wrapper {
+    transition: opacity .5s ease-in-out;
+    opacity: 1;
+    display: flex;
+    padding: 1rem 0;
+    flex: 1;
+
+}
+
+&__img {
+    flex: 1 1 50%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .08);
+}
+
+
+&>img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
+ 
+  .footer {
+    padding: 1rem 0;
+    border-top: 1px solid $color-5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  
+    &__content {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+  }
+  
+    .button {
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    background: transparent;
+  
+    &--menu {
+      box-shadow: inset 0 -2px transparent;
+  
+      &:hover,
+      &:active {
+        box-shadow: inset 0 -2px $color-2;
+      }
+    }
+  
+    &--main {
+      border-radius: 0.5rem;
+      background: $color-2;
+      color: $color-3;
+  
+      &:hover,
+      &:active {
+        background: linear-gradient(to top, transparent 50%, #ffffff1a 100%), #222222;
+      }
+    }
+  }
+  
+  .checked {
+    box-shadow: inset 0 -2px $color-2;
+  }
+  
+  .title {
+    font-size: 5rem;
+    color: $color-2;
+  }
+  
+  .logo {
+    width: 10rem;
+    height: 10rem;
+  }
